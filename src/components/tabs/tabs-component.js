@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import {Tab, MenuItem, Row, Col, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import Home from '../home/home-component';
-import Food from '../food/food-component';
+import SoupsDisplay from '../food/soups-display';
 import "./tabs.css"
 class TabList extends Component {
     render() {
         return (
             <div className="">
-                <Tab.Container id="left-tabs-example" defaultActiveKey="home">
+                <Tab.Container id="menu-tab" defaultActiveKey="home">
                     <Row className="clearfix">
                         <Col sm={12}>
                             <Nav bsStyle="tabs">
@@ -25,7 +25,7 @@ class TabList extends Component {
                         <Col sm={12}>
                             <Tab.Content animation>
                                 <Tab.Pane eventKey="home"><Home /></Tab.Pane>
-                                <Tab.Pane eventKey="soup">Soups</Tab.Pane>
+                                <Tab.Pane eventKey="soup"><SoupsDisplay /></Tab.Pane>
                                 <Tab.Pane eventKey="dessert">Desserts</Tab.Pane>
                                 <Tab.Pane eventKey="beverage">Beverages</Tab.Pane>
                                 <Tab.Pane eventKey="review">Reviews</Tab.Pane>

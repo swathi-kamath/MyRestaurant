@@ -1,0 +1,30 @@
+{"soups":[
+    {
+        "name": "Coconut & Mint Soup",
+        "description": "A hearty broth with coconut milk and mint, flavoured with star anise",
+        "cost":"180",
+        "type":"v",
+        "iurl":"coconutsoup"
+    },
+    {
+        "name": "Sweet Corn & Bacon Soup",
+        "description": "Creamy sweetcorn soup cooked with chicken and sage",
+        "cost":"220",
+        "type":"n",
+        "iurl":"scsoup"
+    },
+    {
+        "name": "Drumstick & Lentil",
+        "description": "Creamy sweetcorn soup cooked with chicken and sage",
+        "cost":"180",
+        "type":"v",
+        "iurl":"dssoup"
+    },
+    {
+        "name": "Tom Yum Soup",
+        "description": "Chinese Soup with indian twist and chicken",
+        "cost":"220",
+        "type":"n",
+        "iurl":"tysoup"
+    }
+]}
