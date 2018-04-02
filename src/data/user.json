@@ -1,0 +1,10 @@
+{"users":[
+    {
+        "phone": "sampleuser",
+        "password": "test"
+    },
+    {
+        "phone": "example",
+        "password": "example"
+    }
+]}

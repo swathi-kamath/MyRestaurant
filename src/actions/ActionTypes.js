@@ -1,0 +1,4 @@
+export const ADD_ITEM = 'ADD_ITEM';
+export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const ADD_ACTIVE_USER = 'ADD_ACTIVE_USER';
+export const REMOVE_ACTIVE_USER = 'REMOVE_ACTIVE_USER';

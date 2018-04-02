@@ -1,0 +1,22 @@
+.home h4{
+    font-family:cursive ;
+    margin-top:10%;
+    font-size: 18px;
+    font-style: italic;
+    color:rgb(216, 142, 93) ; 
+    color:black;   
+    margin-top: 5%;
+    font-weight:bold;
+    text-align: center;
+}
+
+.home h2{
+    font-family:cursive ;
+    margin-top:10%;
+    font-size: 35px;
+    font-style: italic;
+    color:rgb(216, 142, 93) ;
+    margin-top: 10%;
+    font-weight:bold;
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+ul {
+    margin-left: 0px;
+}
+.nav-tabs {
+       background-color: rgb(216, 142, 93) ;
+}
+.nav-tabs > li {
+    margin-left: 0px !important;
+}
+a:link, a:visited {
+    font-size: 14px !important;
+}
+.nav-tabs > li > a {
+	font-weight: bold;
+	color: black;
+}
+.nav-tabs > li > a:hover {
+    background-color: #EC761E !important;
+    color: white !important;
+    border : 0px !important;
+}
+.nav-tabs > li.active > a {
+    background-color: #EC761E !important;
+    color: white !important;
+    border : 0px !important;
+}
+
+.dropdown-menu {
+    background-color: rgb(216, 142, 93) ;
+}
+
+.dropdown-menu > li > a {
+	font-weight: bold;
+	color: black;
+}
+.dropdown-menu > li > a:hover {
+    background-color: #EC761E !important;
+    color: white !important;
+    border : 0px !important;
+}
+.dropdown-menu > .active > a:hover {
+    background-color: #EC761E !important;
+    color: white !important;
+    border : 0px !important;
+}
+
