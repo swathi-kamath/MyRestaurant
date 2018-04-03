@@ -1,24 +1,28 @@
-.header {    
+.header {
     height: auto;
     background-image: none;
     background: #222;
     color: #fff;
     padding: 0;
-    font-size: 30px; 
+    font-size: 30px;
     width:auto;
 }
+
 .logodiv{
     display:inline;
     margin-left:12%;
     position:relative;
 }
+
 .signinout{
    color: White;
    float:right;
    vertical-align: top;
-   z-index: 999;
    margin-right:3%;
    margin-top:2%;
+}
+.signout{
+    font-size: 15px;
 }
 .signinout >.signinup > a,.signinout >.signout> a{
     color: White;

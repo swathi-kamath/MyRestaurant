@@ -47,7 +47,8 @@ export class SignInOut extends Component {
 				}	
 			</div>:
 			<div className="signout">	
-			<h5>Welcome {this.props.userReducer.activeUser}</h5>
+			Welcome {this.props.userReducer.activeUser}
+			<br/><br />
 			<a onClick={this.onSignOutClick}>Sign Out</a>
 			</div>
 			}		

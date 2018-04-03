@@ -12,35 +12,36 @@ a:link, a:visited {
 }
 .nav-tabs > li > a {
 	font-weight: bold;
-	color: black;
+    color: black;
+    border : 1px solid white!important;
 }
 .nav-tabs > li > a:hover {
     background-color: #EC761E !important;
     color: white !important;
-    border : 0px !important;
+    border : 1px solid grey!important;
 }
 .nav-tabs > li.active > a {
     background-color: #EC761E !important;
     color: white !important;
-    border : 0px !important;
+    border : 1px solid grey!important;
 }
-
 .dropdown-menu {
     background-color: rgb(216, 142, 93) ;
+    padding:0px;
 }
-
 .dropdown-menu > li > a {
 	font-weight: bold;
-	color: black;
+    color: black;
+    border : 1px solid white!important;
 }
 .dropdown-menu > li > a:hover {
     background-color: #EC761E !important;
     color: white !important;
-    border : 0px !important;
+    border : 1px solid grey!important;
 }
 .dropdown-menu > .active > a:hover {
     background-color: #EC761E !important;
     color: white !important;
-    border : 0px !important;
+    border : 1px solid grey!important;
 }
 

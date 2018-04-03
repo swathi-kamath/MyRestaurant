@@ -1,0 +1,15 @@
+.cart{
+    color: White;
+
+    float:right;
+ 
+    vertical-align: top;
+ 
+    margin-right:3%;
+ 
+    margin-top:2%;
+ }
+ .cart > a{
+     color: White;
+     font-size:14px;
+  }

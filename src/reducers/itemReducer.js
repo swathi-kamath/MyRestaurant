@@ -1,7 +1,10 @@
 import * as actionType from '../actions/ActionTypes';
-
+const initialstate={
+ itemCount:0,
+ items :[]
+}
     
-const itemReducer = (state = 0, action) => {
+const itemReducer = (state = initialstate, action) => {
   let newState;
   switch (action.type) {
     case actionType.ADD_ITEM:

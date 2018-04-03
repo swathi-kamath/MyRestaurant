@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import './header.css';
+import './cart.css';
 
 
 export class CartIcon extends Component {
 	render() {
 		return (
-			<div className="header">
-				<div className="logobar">
-					<img src={logo}  align = "center" alt={'logo_image'} height="120px"/>
-									
-				</div> 
+			<div className="cart">
+				<a>Bag</a>
             </div>
         );
     }
 }
-export default Header;
+export default CartIcon;
