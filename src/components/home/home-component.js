@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {addItem} from '../../actions';
-import logo from '../header/logo.png';
 import './home.css';
 
 class Home extends Component {

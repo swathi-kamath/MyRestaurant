@@ -14,7 +14,7 @@ class AddItemButton extends Component {
         this.setState({ clicks: this.state.clicks + 1 });        
     }
     decreaseItem = () => {
-        if(this.state.clicks==1){
+        if(this.state.clicks===1){
             this.setState({ showAdd:true });  
         }
         this.setState({ clicks: this.state.clicks - 1 });

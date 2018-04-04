@@ -6,8 +6,6 @@ import './signInModal.css';
 import { connect } from 'react-redux';
 import { addActiveUser } from '../../../actions';
 import data from '../../../data/user.json';
-const fs = require('fs');
-
 
 export class SignInModal extends Component {
     constructor(props) {

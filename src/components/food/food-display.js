@@ -9,9 +9,9 @@ class FoodDisplay extends Component {
       <div className="w3-container food-display">     
       <div className="w3-row">
         {          
-          data[this.props.category].map(function (soup, index){
-            return <FoodItem name={soup.name} key={index} description={soup.description} cost={soup.cost}
-            iurl={soup.iurl} type={soup.type} cost={soup.cost}/>;
+          data[this.props.category].map(function (food, index){
+            return <FoodItem name={food.name} key={index} description={food.description} cost={food.cost}
+            iurl={food.iurl} type={food.type} foodid={food.foodid}/>;
           })
         }
       </div>

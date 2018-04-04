@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "js-cookie": "^2.2.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
@@ -11,6 +12,8 @@
     "react-router-redux": "^4.0.8",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
+    "redux-cookie": "^0.5.9",
+    "redux-cookies-middleware": "^0.1.3",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
