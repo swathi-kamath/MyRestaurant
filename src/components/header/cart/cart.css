@@ -13,3 +13,54 @@
      color: White;
      font-size:14px;
   }
+
+  
+cartModal {
+    vertical-align: middle;
+}
+.cartModal .modal-body {
+    min-height: 160px;
+    padding: 12px;
+    padding-left: 35px;
+    font-size: 14px;
+    line-height: 20px;
+    color : #333333;
+    background-color:white;   
+}
+.cartModal .modal-header {
+    border-bottom: 1px solid #d0d0d0;
+    padding: 9px 9px;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    background-color: rgb(216, 142, 93) ;
+    border-radius:6px 6px 0 0;
+    border-bottom : 1px solid #d0d0d0;
+}
+.sr-only, .close{
+    color:black;
+}
+.modal-body > input{
+    width: 80%;
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-bottom:20px;
+    outline: 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+.modal-header .modal-title {
+    font-size: 15px;
+    color: white;
+    line-height: 40px;
+}
+.cartModal .modal-footer {
+    text-align: right;
+    background-color: #f9d8aa;
+    border-top: 1px solid #d0d0d0;
+    padding: 14px 15px 15px;
+    border-radius: 0 0 6px 6px;
+    box-shadow: inset 0 1px 0 #ffffff;
+}
+
+
+

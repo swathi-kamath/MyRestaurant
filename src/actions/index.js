@@ -1,8 +1,12 @@
 import * as actionType from './ActionTypes';
 
-export const addItem = () => ({
+export const addItem = (item) => ({
   type: actionType.ADD_ITEM,
-  payload: 1
+  payload: item
+});
+export const removeitem = (itemid) => ({
+  type: actionType.ADD_ITEM,
+  payload: itemid
 });
 
 export const addActiveUser = (activeUser) => ({

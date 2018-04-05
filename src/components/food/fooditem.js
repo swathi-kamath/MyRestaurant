@@ -19,7 +19,8 @@ class FoodItem extends Component {
                 <div className="food_cost">
                 &#8377;{this.props.cost}
                 </div>
-                <AddItemButton />
+                <AddItemButton name={this.props.name}  cost={this.props.cost}
+             foodid={this.props.foodid}  type={this.props.type} />
             </div>
            
         );

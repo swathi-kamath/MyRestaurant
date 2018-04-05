@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './fooditem.css';
-
+import { connect } from 'react-redux';
+import { addItem} from '../../actions'
 class AddItemButton extends Component {
     constructor(props) {
         super(props);
@@ -9,9 +10,13 @@ class AddItemButton extends Component {
             showAdd: true
         };
     }
-
     incrementItem = () => {
-        this.setState({ clicks: this.state.clicks + 1 });        
+        this.setState({ clicks: this.state.clicks + 1 });
+        this.props.dispatch(addItem( {
+            "foodid":this.props.foodid,
+            "name": this.props.name,
+            "cost":this.props.cost,
+        }));        
     }
     decreaseItem = () => {
         if(this.state.clicks===1){
@@ -23,8 +28,13 @@ class AddItemButton extends Component {
     handleAddClick = () => {
         this.setState({ clicks: this.state.clicks + 1 }); 
         this.setState({ showAdd:false });
+        this.props.dispatch(addItem( {
+            foodid:this.props.foodid,
+            name: this.props.name,
+            cost:this.props.cost,
+        }));  
     }
-
+    
     render() {
         return (            
             <div className="add_button_div">
@@ -40,4 +50,4 @@ class AddItemButton extends Component {
         );
     }
 }
-export default AddItemButton;
+export default connect(state => state)(AddItemButton);
