@@ -19,6 +19,8 @@ const userReducer = (state = initialState, action) => {
     };
     case actionType.REMOVE_ACTIVE_USER:
     Cookies.remove('activeUser');
+    Cookies.remove('items');
+    Cookies.remove('itemCount');
     return {
       ...state,
       activeUser: ""

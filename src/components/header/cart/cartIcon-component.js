@@ -3,6 +3,8 @@ import './cart.css';
 import { connect } from 'react-redux';
 import { ModalHeader, ModalTitle, ModalBody } from 'react-bootstrap';
 import Modal from 'react-bootstrap/lib/Modal';
+import EmptyPlate from '../../../data/images/EmptyPlate.svg';
+import { Image } from 'react-bootstrap';
 
 export class CartIcon extends Component {
 	constructor(props) {
@@ -19,26 +21,32 @@ export class CartIcon extends Component {
 	closeCartModal(){
 		this.setState({showCartModal:false});
 	}
+	componentWillUnmount(){
+		alert("cart unmounting");
+	}
 	render() {
 		return (
-			<div className="cart">
+			<div className="cart">			
 				<a onClick={this.handleCartClick}>Bag</a>
+				{ this.props.itemReducer.itemCount>0?
+					<span>{this.props.itemReducer.itemCount}</span>:''
+				}
 				<div className="carts-modal">
                 <Modal  show={this.state.showCartModal} keyboard={false}dialogClassName="cartModal"
-                    onHide={this.closeCartModal}>
-                   
+                    onHide={this.closeCartModal}>      
                         <div>
                             <ModalHeader closeButton={true} >
                                 <ModalTitle>Your Shopping Bag</ModalTitle>
                             </ModalHeader>
                             <ModalBody>
-							   {this.props.itemReducer.itemCount}
+							{!this.props.itemReducer.itemCount===0?	
+							   <div>{this.props.itemReducer.itemCount}
 							   <br/>
 							   {
 							  this.props.itemReducer.items.map((item,index)=>{
 								return <div key={index}>{item.foodid} {item.count}</div>
 							  	})
-							   }							   
+							   }</div>:<Image src={EmptyPlate}/>}							   
                             </ModalBody>
                         </div> 
                 </Modal>

@@ -1,17 +1,26 @@
 import * as actionType from '../actions/ActionTypes';
+import Cookies from 'js-cookie';
+
 const initialstate = {
   itemCount: 0,
   items: []
 }
-
+if(Cookies.get('items')){
+  console.log(Cookies.get('items'));
+  initialstate.items=JSON.parse(Cookies.get('items'));
+}
+if(Cookies.get('itemCount')){
+  initialstate.itemCount=parseInt(Cookies.get('itemCount'));
+}
 const itemReducer = (state = initialstate, action) => {
+  let newState;
   switch (action.type) {
-    case actionType.ADD_ITEM:{
-      return {
+    case actionType.ADD_ITEM:
+      newState= {
         itemCount: state.itemCount+1 ,
         items: [ ...state.items,action.payload]
-      }
-    }    
+      }       
+    break;
     case actionType.INCREMENT_ITEM:{
       const updatedItems = state.items.map(item => { 
         if(item.foodid === action.payload){ 
@@ -19,11 +28,12 @@ const itemReducer = (state = initialstate, action) => {
         } 
         return item;
         }) ;        
-      return{
+      newState={
         itemCount: state.itemCount+1,
         items:updatedItems
       }
     }
+    break;
     case actionType.DECREMENT_ITEM:{
       const updatedItems = state.items.map(item => { 
         if(item.foodid === action.payload){ 
@@ -31,11 +41,12 @@ const itemReducer = (state = initialstate, action) => {
         } 
         return item;
         }) ;        
-      return{
+      newState={
         itemCount: state.itemCount-1,
         items:updatedItems
       }
     }
+    break;
     case actionType.REMOVE_ITEM:{
       let itemCurrentCount;
       const updatedItems = state.items.map(item => { 
@@ -45,15 +56,29 @@ const itemReducer = (state = initialstate, action) => {
         } 
         return item;
         }) ;        
-      return{
+      newState={
         itemCount: state.itemCount-itemCurrentCount,
         items:updatedItems
-      }
+      }      
     }
-  
-    return state;
+    break;
+    case actionType.CLEAR_CART:
+    return{
+      itemCount: 0,
+      items: []
+    }
     default:
-      return state;
+      newState= state;
+      break;
   }
+  if(Cookies.get('items')){
+    Cookies.remove('items');
+  }
+  if(Cookies.get('itemCount')){
+    Cookies.remove('itemCount');
+  }
+  Cookies.set('items',JSON.stringify(newState.items));
+  Cookies.set('itemCount',newState.itemCount);
+  return newState;
 }
 export default itemReducer;

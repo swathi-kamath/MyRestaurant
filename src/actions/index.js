@@ -20,7 +20,9 @@ export const addActiveUser = (activeUser) => ({
   type: actionType.ADD_ACTIVE_USER,
   payload: activeUser
 });
-
+export const clearCart = () => ({
+  type: actionType.CLEAR_CART
+});
 export const removeActiveUser = () => ({
   type: actionType.REMOVE_ACTIVE_USER
 });

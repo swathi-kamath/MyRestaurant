@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { removeActiveUser } from '../../../actions';
+import { removeActiveUser,clearCart } from '../../../actions';
 import SignInModal from './signInModal';
 
 export class SignInOut extends Component {
@@ -20,7 +20,9 @@ export class SignInOut extends Component {
 	}
 	onSignOutClick() {
 		this.props.dispatch(removeActiveUser(this.state.userPhoneNumber));	
+		this.props.dispatch(clearCart());	
 		this.setShowSignUpLink(true);
+		window.location.reload();
 	}
 	closeSignInUpModal() {
 		this.setState({ showSignInUpModal: false });		
