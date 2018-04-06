@@ -4,11 +4,18 @@ export const addItem = (item) => ({
   type: actionType.ADD_ITEM,
   payload: item
 });
-export const removeitem = (itemid) => ({
-  type: actionType.ADD_ITEM,
+export const removeItem = (itemid) => ({
+  type: actionType.REMOVE_ITEM,
   payload: itemid
 });
-
+export const incrementItem = (itemid) => ({
+  type: actionType.INCREMENT_ITEM,
+  payload: itemid
+});
+export const decrementItem = (itemid) => ({
+  type: actionType.DECREMENT_ITEM,
+  payload: itemid
+});
 export const addActiveUser = (activeUser) => ({
   type: actionType.ADD_ACTIVE_USER,
   payload: activeUser

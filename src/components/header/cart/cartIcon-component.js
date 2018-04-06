@@ -24,7 +24,7 @@ export class CartIcon extends Component {
 			<div className="cart">
 				<a onClick={this.handleCartClick}>Bag</a>
 				<div className="carts-modal">
-                <Modal backdrop={'static'} show={this.state.showCartModal} keyboard={false} dialogClassName="cartModal"
+                <Modal  show={this.state.showCartModal} keyboard={false}dialogClassName="cartModal"
                     onHide={this.closeCartModal}>
                    
                         <div>
@@ -35,14 +35,10 @@ export class CartIcon extends Component {
 							   {this.props.itemReducer.itemCount}
 							   <br/>
 							   {
-							  this.props.itemReducer.items.map((item)=>{
-							  })
-							   }
-
-							  
-			
-						
-							   
+							  this.props.itemReducer.items.map((item,index)=>{
+								return <div key={index}>{item.foodid} {item.count}</div>
+							  	})
+							   }							   
                             </ModalBody>
                         </div> 
                 </Modal>

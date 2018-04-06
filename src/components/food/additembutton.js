@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './fooditem.css';
 import { connect } from 'react-redux';
-import { addItem} from '../../actions'
+import { addItem, decrementItem,incrementItem,removeItem} from '../../actions';
 class AddItemButton extends Component {
     constructor(props) {
         super(props);
@@ -12,15 +12,14 @@ class AddItemButton extends Component {
     }
     incrementItem = () => {
         this.setState({ clicks: this.state.clicks + 1 });
-        this.props.dispatch(addItem( {
-            "foodid":this.props.foodid,
-            "name": this.props.name,
-            "cost":this.props.cost,
-        }));        
+        this.props.dispatch(incrementItem(this.props.foodid));        
     }
     decreaseItem = () => {
         if(this.state.clicks===1){
             this.setState({ showAdd:true });  
+            this.props.dispatch(removeItem(this.props.foodid));      
+        }else{
+            this.props.dispatch(decrementItem(this.props.foodid));     
         }
         this.setState({ clicks: this.state.clicks - 1 });
        
@@ -28,10 +27,11 @@ class AddItemButton extends Component {
     handleAddClick = () => {
         this.setState({ clicks: this.state.clicks + 1 }); 
         this.setState({ showAdd:false });
-        this.props.dispatch(addItem( {
+        this.props.dispatch(addItem({
             foodid:this.props.foodid,
             name: this.props.name,
             cost:this.props.cost,
+            count:1
         }));  
     }
     
