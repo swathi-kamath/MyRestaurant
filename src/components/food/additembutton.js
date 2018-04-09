@@ -8,31 +8,27 @@ class AddItemButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            clicks: 0,
-            showAdd: true,
             showAlertModal: false
         };
         this.closeAlertModal = this.closeAlertModal.bind(this);
+        this.getCount=this.getCount.bind(this);
     }
     incrementItem = () => {      
-        this.setState({ clicks: this.state.clicks + 1 });
         this.props.dispatch(incrementItem(this.props.foodid));
     }
     decreaseItem = () => {
-        if (this.state.clicks === 1) {
-            this.setState({ showAdd: true });
+        if (this.getCount(this.props.itemReducer.items) === 1) {
             this.props.dispatch(removeItem(this.props.foodid));
+            this.setState({ showAdd: true });
         } else {
             this.props.dispatch(decrementItem(this.props.foodid));
         }
-        this.setState({ clicks: this.state.clicks - 1 });
 
     }
     handleAddClick = () => {
         if (this.props.userReducer.activeUser === "") {
             this.setState({ showAlertModal: true });
         } else {
-            this.setState({ clicks: this.state.clicks + 1 });
             this.setState({ showAdd: false });
             this.props.dispatch(addItem({
                 foodid: this.props.foodid,
@@ -43,27 +39,26 @@ class AddItemButton extends Component {
             }));
         }
     }
-    componentWillMount() {
-        this.props.itemReducer.items.map((item) => {
+    getCount(items){
+        let count=0;
+        items.map((item) => {
             if (item.foodid === this.props.foodid) {
-                this.setState({ clicks: parseInt(item.count) });
-                if (parseInt(item.count) > 0) {
-                    this.setState({ showAdd: false });
-                }
+                count = parseInt(item.count);
             }
         });
+        return count;
     }
-   
+       
     closeAlertModal() {
         this.setState({ showAlertModal: false });
     }
     render() {
         return (
             <div className="add_button_div">
-                {!this.state.showAdd ?
+                {this.getCount(this.props.itemReducer.items)>0 ?
                     <div className="add_counter_div">
                         <div className="inc_dec_div" onClick={this.decreaseItem}>-</div>
-                        <div className="count_div"><h5>{this.state.clicks}</h5></div>
+                        <div className="count_div"><h5>{this.getCount(this.props.itemReducer.items)}</h5></div>
                         <div className="inc_dec_div" onClick={this.incrementItem}>+</div>
                     </div>
                     : <div className="add_text_div" onClick={this.handleAddClick}><h5>Add</h5></div>
