@@ -3,12 +3,23 @@ import './fooditem.css';
 import { Image } from 'react-bootstrap';
 import Images from '../../data/images/images'
 import AddItemButton from './additembutton';
+import Veg from '../../data/images/Veg.png';
+import NonVeg from '../../data/images/Non-Veg.png';
+import { connect } from 'react-redux';
+
 class FoodItem extends Component {
+  
     render() {
         return (
             <div className="w3-quarter fooditem">
                 <div className="food_image">
                     <Image src={Images[this.props.iurl]} responsive />
+                </div>
+                <div className="vnv_image">
+                {this.props.type==="v"?
+                      <Image src={Veg} responsive />
+                :<Image src={NonVeg} responsive />
+                }
                 </div>
                 <div className="food_name">
                 <h4>{this.props.name}</h4>
@@ -26,4 +37,4 @@ class FoodItem extends Component {
         );
     }
 }
-export default FoodItem;
+export default connect(state => state)(FoodItem);

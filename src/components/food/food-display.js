@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import data from '../../data/fooditems.json';
 import FoodItem from './fooditem';
 import './fooditem.css';
+import { connect } from 'react-redux';
+
 
 class FoodDisplay extends Component {
   render() {
@@ -19,4 +21,4 @@ class FoodDisplay extends Component {
     );
   }
 }
-export default FoodDisplay;
+export default connect(state => state)(FoodDisplay);

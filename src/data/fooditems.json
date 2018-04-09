@@ -18,7 +18,7 @@
     {   
         "foodid":"sp_3",
         "name": "Drumstick & Lentil",
-        "description": "Drumstick broth flavoured with Indian spices",
+        "description": "Drumstick broth richly flavoured with Indian spices ",
         "cost":"180",
         "type":"v",
         "iurl":"dssoup"
@@ -82,7 +82,7 @@
         "description": "contains egg",
         "cost":"140 Per pc",
         "type":"n",
-        "iurl":"spiapple"
+        "iurl":"velvet"
     },
     {
         "foodid":"ds_2",
@@ -90,6 +90,6 @@
         "description": "contains egg",
         "cost":"120 Per pc",
         "type":"n",
-        "iurl":"spiapple"
+        "iurl":"brownie"
     }
 ]}

@@ -105,3 +105,12 @@ padding-top:2%;
     height:50px;
     background-color:rgb(216, 142, 93);
  }
+.vnv_image{
+    padding-left: 1%;
+    padding-top:2%;
+    padding-right:2%;
+    height:10%;
+    width:10%;
+    float:left;
+
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {connect} from 'react-redux';
 import {Tab, MenuItem, Row, Col, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import Home from '../home/home-component';
 import FoodDisplay from '../food/food-display';
@@ -41,4 +41,4 @@ class TabList extends Component {
     }
 }
 
-export default TabList;
+export default connect(state=>state)(TabList);

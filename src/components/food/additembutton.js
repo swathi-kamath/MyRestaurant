@@ -14,7 +14,7 @@ class AddItemButton extends Component {
         };
         this.closeAlertModal = this.closeAlertModal.bind(this);
     }
-    incrementItem = () => {
+    incrementItem = () => {      
         this.setState({ clicks: this.state.clicks + 1 });
         this.props.dispatch(incrementItem(this.props.foodid));
     }
@@ -38,7 +38,8 @@ class AddItemButton extends Component {
                 foodid: this.props.foodid,
                 name: this.props.name,
                 cost: this.props.cost,
-                count: 1
+                count: 1,
+                type: this.props.type
             }));
         }
     }
@@ -52,6 +53,7 @@ class AddItemButton extends Component {
             }
         });
     }
+   
     closeAlertModal() {
         this.setState({ showAlertModal: false });
     }
@@ -81,4 +83,16 @@ class AddItemButton extends Component {
         );
     }
 }
+
+function mapStateToProps(state) {
+    state.items.map((item) => {
+        if (item.foodid === this.props.foodid) {
+            this.setState({ clicks: parseInt(item.count) });
+            if (parseInt(item.count) > 0) {
+                this.setState({ showAdd: false });
+            }
+        }
+    });
+  }
+  
 export default connect(state => state)(AddItemButton);
