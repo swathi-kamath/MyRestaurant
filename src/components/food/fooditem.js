@@ -28,7 +28,7 @@ class FoodItem extends Component {
                 {this.props.description}
                 </div>
                 <div className="food_cost">
-                &#8377;{this.props.cost}
+                &#8377;&nbsp;{this.props.cost}
                 </div>
                 <AddItemButton name={this.props.name}  cost={this.props.cost}
              foodid={this.props.foodid}  type={this.props.type} />

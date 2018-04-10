@@ -80,7 +80,7 @@
         "foodid":"ds_1",
         "name": "Red Velvet Pastry",
         "description": "contains egg",
-        "cost":"140 Per pc",
+        "cost":"140",
         "type":"n",
         "iurl":"velvet"
     },
@@ -88,7 +88,7 @@
         "foodid":"ds_2",
         "name": "Chocolate Brownie",
         "description": "contains egg",
-        "cost":"120 Per pc",
+        "cost":"120",
         "type":"n",
         "iurl":"brownie"
     }

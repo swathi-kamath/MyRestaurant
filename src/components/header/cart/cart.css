@@ -18,24 +18,17 @@
     margin-top:2px;
     vertical-align:top;
   }  
-.cartModal, .cartModal>.modal-content{
-    height:90% !important ;
-}
-.cartModal>.modal-content {
+.cartModal .modal-body {
+    max-height: calc(100vh - 212px);
+    min-height: calc(100vh - 212px);
+    overflow-y: auto;
     overflow: scroll;
     overflow-x: hidden;
-    height:90% !important ;
-} 
-
-.cartModal .modal-body {
-    min-height: 160px;
-    height: 100%;
-    padding: 12px;
     padding-left: 35px;
     font-size: 14px;
     line-height: 20px;
     color : #333333;
-    background-color:white;   
+    background-color:white;  
 }
 
 .cartModal .modal-body > img {
@@ -47,11 +40,26 @@
     border-bottom: 1px solid #d0d0d0;
     padding: 9px 9px;
     padding-left: 35px;
-    margin-bottom: 20px;
     background-color: rgb(216, 142, 93) ;
     border-radius:6px 6px 0 0;
     border-bottom : 1px solid #d0d0d0;
 }
+.cartModal .modal-footer {
+    border-top: 1px solid #d0d0d0;
+    padding: 9px 9px;
+    color:white;
+    background-color: rgb(216, 142, 93) ;
+    border-radius:0 0 6px 6px;
+}
+
+.cartModal .modal-footer>h4:first-of-type {
+   float:right;
+   margin-right:10%;
+}
+.cartModal .modal-footer>h4:nth-of-type(2n) {
+    float:left;
+    margin-left:10%;
+ }
 .sr-only, .close{
     color:black;
 }
@@ -69,24 +77,15 @@
     color: white;
     line-height: 40px;
 }
-.cartModal .modal-footer {
-    text-align: right;
-    background-color: #f9d8aa;
-    border-top: 1px solid #d0d0d0;
-    padding: 14px 15px 15px;
-    border-radius: 0 0 6px 6px;
-    box-shadow: inset 0 1px 0 #ffffff;
-}
 .cartItem{
     border-bottom: 1px solid grey;
-    margin-right:20%;
     margin-top:3%;
-    padding-bottom:10%;
+    padding-bottom:15%;
     height:20%;
 }
 .cart_vn_image{
-height:5%;
-width:5%;
+height:4%;
+width:4%;
 float:left;
 }
 .cart_part_1{
@@ -94,20 +93,41 @@ float:left;
     padding-bottom:3%;
 }
 .cart_food_name{
-    margin-left:10%;
-    font-size:15px;
+    margin-left:6%;
+    font-size:12px;
+    width:60%;
+    font-weight: bold;
+    float:left;
 }
 .cart_add_button{
     float:right;
     text-align: right;
-    width:60%;
-    height: 5%;
+    width:70%;
+    height: 4%;
     padding-right:20%;
 }
+.cart_item_remove{
+    float:right;
+    width:15%;
+}
+.cart_item_remove>button{
+    background-color:rgb(216, 142, 93) ;
+    font-size: 12px;
+    color:white ;
+    font-weight:bold;
+}
 .cart_cost{
-    width:40%;
+    margin-top:2%;
+    padding-left:8%;
+    text-align: left;
+    vertical-align: top;
+    margin-bottom:4%;
     float:left;
-    padding-left:10%;
+    height:20%;
+    color:rgb(216, 142, 93);
+    font-size:17px;
+    font-weight: bold;
+    width:30%
 }
 @media all and (max-width: 600px) {
     .cart > a{
@@ -124,4 +144,11 @@ float:left;
        margin-top:2px;
        vertical-align:top;
      }
+}
+
+@media all and (min-width: 900px) {
+    .cartModal, .cartModal>.modal-content{
+      width:60%;
+      margin-left:20%;
+    }
 }

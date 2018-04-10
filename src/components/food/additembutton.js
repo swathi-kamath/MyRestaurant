@@ -19,11 +19,9 @@ class AddItemButton extends Component {
     decreaseItem = () => {
         if (this.getCount(this.props.itemReducer.items) === 1) {
             this.props.dispatch(removeItem(this.props.foodid));
-            this.setState({ showAdd: true });
         } else {
             this.props.dispatch(decrementItem(this.props.foodid));
         }
-
     }
     handleAddClick = () => {
         if (this.props.userReducer.activeUser === "") {
