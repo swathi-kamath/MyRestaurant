@@ -50,13 +50,6 @@ const itemReducer = (state = initialstate, action) => {
     case actionType.REMOVE_ITEM: {
       let itemCurrentCount;
       let dIndex;
-      /* const updatedItems = state.items.map(item => { 
-         if(item.foodid === action.payload){ 
-           itemCurrentCount = item.count;
-         return {};
-         } 
-         return item;
-         }) ; */
       state.items.map((item, index) => {
         if (item.foodid === action.payload) {
           dIndex = index;

@@ -22,7 +22,7 @@ class FoodItem extends Component {
                 }
                 </div>
                 <div className="food_name">
-                <h4>{this.props.name}</h4>
+                {this.props.name}
                 </div>
                 <div className="food_desc">
                 {this.props.description}

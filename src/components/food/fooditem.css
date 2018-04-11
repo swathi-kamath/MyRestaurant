@@ -3,14 +3,11 @@
     margin-top:2%;
     margin-bottom:2%;
     margin-right :8%;
-    opacity: 1;
-    z-index: 999;
     background-color:#fff;
     border-radius: 3px;
     box-shadow:0 2px 4px 0 rgba(204,204,204,.5);
     padding-bottom:1%;
 }
-
 .food-display{
 padding-left:8%;
 padding-top:2%;
@@ -27,11 +24,9 @@ padding-top:2%;
 .food_name{
     margin-top:2%;
     padding-left:3%;
-}
-.food_name >h4{
     font-weight: bold !important;
     text-align: left;
-    font-size:18px;
+    font-size:18px;   
 }
 .food_desc{
     text-align: left; 

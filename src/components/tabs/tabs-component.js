@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import {Tab, MenuItem, Row, Col, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import Home from '../home/home-component';
 import FoodDisplay from '../food/food-display';
-import "./tabs.css"
+import "./tabs.css";
+import ReviewDisplay from '../review/review-display';
 class TabList extends Component {
     render() {
         return (
@@ -28,7 +29,7 @@ class TabList extends Component {
                                 <Tab.Pane eventKey="soups"><FoodDisplay category="soups"/></Tab.Pane>
                                 <Tab.Pane eventKey="salads"><FoodDisplay category="salads"/></Tab.Pane>
                                 <Tab.Pane eventKey="desserts"><FoodDisplay category="desserts"/></Tab.Pane>
-                                <Tab.Pane eventKey="review">Reviews</Tab.Pane>
+                                <Tab.Pane eventKey="review"><ReviewDisplay/></Tab.Pane>
                                 <Tab.Pane eventKey="recipe">Recipes</Tab.Pane>
                             </Tab.Content>
                         </Col>

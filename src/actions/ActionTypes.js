@@ -6,3 +6,5 @@ export const CLEAR_CART = 'CLEAR_CART';
 export const REMOVE_ACTIVE_USER = 'REMOVE_ACTIVE_USER';
 export const INCREMENT_ITEM = 'INCREMENT_ITEM';
 export const DECREMENT_ITEM = 'DECREMENT_ITEM';
+export const REMOVE_REVIEW = 'REMOVE_REVIEW';
+export const ADD_REVIEW = 'ADD_REVIEW';

@@ -1,0 +1,22 @@
+{"reviews":[
+    {
+        "user" : "Shaaru S",
+        "rating": 5,
+        "comments": "Right now this the best place to hangout with friends. Prior reservations recommended. Pricing is extremely reasonable for the ambience and food offered. Though the brewery is visible you won't get any smell so it is good for everyone including family outings. Not a great place for vegetarians."
+    },
+    {
+        "user" : "Ashish Dixit",
+        "rating":4.5,
+        "comments":"The place looks great, has a really great ambience. Perfect for a nice family meal or if you're just grabbing a beer with your buddies. The staff are really courteous and helpful. The beer is amazing and they a great variety to choose from. Food is brilliant, especially loved the pasta. Definitely check it out !"
+    },
+    {
+        "user" : "Chethan S",
+        "rating":2.2,
+        "comments": "I liked this place previously and used to visit from a distance.Today, to my surprise they have changed the menu and some of my favorites no more exist.The food selection is poor. Music too Loud. Unfortunately the beer though brewed fresh gets stale by the time it gets to the table because of the way the service is structured.Slightly on the expensive side. Didn't feel it's value for money. A poor experience all in all."
+    },
+    {
+        "user" : "Palaash Singh",
+        "rating":4,
+        "comments": "It's an amazing place great food and excellent services.  The only thing that I felt was they should not charge for the samplers of beer and that also 70 bucks for each. This is definitely a minus probable solution is that they can give smaller samplers Otherwise it's an best place in North Bangalore to go out !!!"
+    }
+]}
