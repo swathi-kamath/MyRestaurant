@@ -26,7 +26,7 @@
     {
         "foodid":"sp_4",
         "name": "Tom Yum Soup",
-        "description": "Chinese Soup with indian twist and chicken",
+        "description": "Chinese Soup with indian twist and chicken broth",
         "cost":"220",
         "type":"n",
         "iurl":"tysoup"
@@ -52,7 +52,7 @@
     {
         "foodid":"sl_3",
         "name": "Burgul & Quinoa",
-        "description": "Broken wheat & quinoa with a fennel dressing",
+        "description": "Broken wheat & quinoa with a rich and special fennel dressing ",
         "cost":"320",
         "type":"v",
         "iurl":"burgul"
