@@ -39,9 +39,10 @@ class AddItemButton extends Component {
     }
     getCount(items){
         let count=0;
+       // eslint-disable-next-line
         items.map((item) => {
             if (item.foodid === this.props.foodid) {
-                count = parseInt(item.count);
+                count = parseInt(item.count,10);
             }
         });
         return count;
@@ -77,15 +78,4 @@ class AddItemButton extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    state.items.map((item) => {
-        if (item.foodid === this.props.foodid) {
-            this.setState({ clicks: parseInt(item.count) });
-            if (parseInt(item.count) > 0) {
-                this.setState({ showAdd: false });
-            }
-        }
-    });
-  }
-  
 export default connect(state => state)(AddItemButton);

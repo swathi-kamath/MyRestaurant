@@ -14,7 +14,7 @@ class TabList extends Component {
                         <Col sm={12} >
                             <Nav bsStyle="tabs"  >
                                 <NavItem eventKey="home" className="w3-mobile">Home</NavItem>                              
-                                <NavDropdown eventKey="food" title="Food" id="nav-dropdown-within-tab" className="w3-mobile">
+                                <NavDropdown title="Food" className="w3-mobile">
                                     <MenuItem eventKey="soups">Soups</MenuItem>
                                     <MenuItem eventKey="salads">Salads</MenuItem>
                                     <MenuItem eventKey="desserts">Desserts</MenuItem>

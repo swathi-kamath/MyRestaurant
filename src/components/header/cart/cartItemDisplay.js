@@ -5,7 +5,7 @@ import Veg from '../../../data/images/Veg.png';
 import NonVeg from '../../../data/images/Non-Veg.png';
 import { Image } from 'react-bootstrap';
 import AddItemButton from '../../food/additembutton';
-import {removeItem} from '../../../actions';
+import { removeItem } from '../../../actions';
 
 export class CartItem extends Component {
     constructor(props) {
@@ -15,8 +15,8 @@ export class CartItem extends Component {
     handleRemoveClick(e) {
         this.props.dispatch(removeItem(this.props.foodid));
     }
-    getProduct(count,cost){
-        return count*cost;
+    getProduct(count, cost) {
+        return count * cost;
     }
     render() {
         return (
@@ -31,13 +31,11 @@ export class CartItem extends Component {
                     <div className="cart_food_name">
                         {this.props.name}
                     </div>
-                    <div className="cart_item_remove">
-                        <button onClick={this.handleRemoveClick}>X</button>
-                    </div>
+                    <div className="cart_item_remove" onClick={this.handleRemoveClick}>X</div>
                 </div>
                 <div>
                     <div className="cart_cost">
-                    &#8377;&nbsp;{this.getProduct(this.props.count,this.props.cost)}
+                        &#8377;&nbsp;{this.getProduct(this.props.count, this.props.cost)}
                     </div>
                     <div className="cart_add_button">
                         <AddItemButton name={this.props.name} cost={this.props.cost}

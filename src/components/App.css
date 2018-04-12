@@ -35,6 +35,8 @@ div[data-reactroot] {
 body {
   background-image :url("food.png");
   height: 100%;
+  overflow-x: scroll;
+  overflow-y: scroll;
 }
 .flex-column {
   display: flex;

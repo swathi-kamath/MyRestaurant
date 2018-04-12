@@ -6,6 +6,7 @@
     padding: 0;
     font-size: 30px;
     width:100%;
+    overflow: hidden;
 }
 .logodiv{
     display:inline;
@@ -29,8 +30,10 @@
 
 @media all and (max-width: 600px) {
     .logodiv{
-        display:inline;
+        display:block;
         margin-left:0%;
+        text-align: center;
+        width:100%;
     }
     .signout{
         font-size: 12px;
@@ -38,5 +41,10 @@
     .signinout >.signinup > a,.signinout >.signout> a{
         color: White;
         font-size:12px;
+     }
+     .signinout{
+        color: White;
+        vertical-align: top;
+        margin-left:12%;
      }
 }

@@ -25,12 +25,14 @@ export class SignInModal extends Component {
     }
     handleSignInClick(e) {       
         let signInFailed=true;
+        /* eslint-disable */
         data["users"].map(function(user) {
             if (user.phone === this.state.userPhoneNumber && user.password === this.state.userPassword) {
                 signInFailed=false;
                 this.props.dispatch(addActiveUser(this.state.userPhoneNumber));
             }
         }, this);
+        /* eslint-enable */
         this.setState({signInFailed:signInFailed});
         if (!signInFailed) {
             this.props.closeSignInUpModal();

@@ -8,7 +8,8 @@ import { connect } from 'react-redux';
 class FoodDisplay extends Component {
   render() {
     return (
-      <div className="w3-container food-display">     
+      <div className="w3-container food-display"> 
+      <div className="display_page">Food > {this.props.category}  </div> 
       <div className="w3-row foodrow">
         {          
           data[this.props.category].map(function (food, index){

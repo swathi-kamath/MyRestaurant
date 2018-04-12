@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './cart.css';
 import { connect } from 'react-redux';
-import { ModalHeader, ModalTitle, ModalBody ,ModalFooter} from 'react-bootstrap';
+import { ModalHeader, ModalTitle, ModalBody, ModalFooter } from 'react-bootstrap';
 import Modal from 'react-bootstrap/lib/Modal';
 import EmptyPlate from '../../../data/images/EmptyPlate.svg';
 import { Image } from 'react-bootstrap';
@@ -16,11 +16,13 @@ export class CartIcon extends Component {
 		this.handleCartClick = this.handleCartClick.bind(this);
 		this.closeCartModal = this.closeCartModal.bind(this);
 	}
-	getTotalCost(items){
-		let totalCost=0;
-		items.map((item)=>{
-			totalCost=totalCost+(item.cost*item.count)
+	getTotalCost(items) {
+		let totalCost = 0;
+		/* eslint-disable */
+		items.map((item) => {
+			totalCost = totalCost + (item.cost * item.count)
 		});
+		/* eslint-enable */
 		return totalCost;
 	}
 	handleCartClick() {
@@ -49,14 +51,14 @@ export class CartIcon extends Component {
 									<div>
 										{
 											this.props.itemReducer.items.map((item, index) => {
-												return <CartItem key={index} foodid={item.foodid} 
-												name={item.name} cost={item.cost} count={item.count} />
+												return <CartItem key={index} foodid={item.foodid}
+													name={item.name} cost={item.cost} count={item.count} />
 											})
 										}</div> : <Image src={EmptyPlate} />}
 							</ModalBody>
 							<ModalFooter>
-							<h4>Check Out</h4>
-							<h4>&#8377;&nbsp;{this.getTotalCost(this.props.itemReducer.items)}</h4>	
+								<h4>Check Out</h4>
+								<h4>&#8377;&nbsp;{this.getTotalCost(this.props.itemReducer.items)}</h4>
 							</ModalFooter>
 						</div>
 					</Modal>

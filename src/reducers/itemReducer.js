@@ -10,7 +10,7 @@ if (Cookies.get('items')) {
   initialstate.items = JSON.parse(Cookies.get('items'));
 }
 if (Cookies.get('itemCount')) {
-  initialstate.itemCount = parseInt(Cookies.get('itemCount'));
+  initialstate.itemCount = parseInt(Cookies.get('itemCount'),10);
 }
 const itemReducer = (state = initialstate, action) => {
   let newState;
@@ -50,6 +50,7 @@ const itemReducer = (state = initialstate, action) => {
     case actionType.REMOVE_ITEM: {
       let itemCurrentCount;
       let dIndex;
+      // eslint-disable-next-line
       state.items.map((item, index) => {
         if (item.foodid === action.payload) {
           dIndex = index;

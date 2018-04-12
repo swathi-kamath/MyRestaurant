@@ -8,6 +8,12 @@
     box-shadow:0 2px 4px 0 rgba(204,204,204,.5);
     padding-bottom:1%;
 }
+.display_page{
+    float:left;
+    font-size: 18px;
+    color: rgb(216, 142, 93);
+    font-weight: bold;
+}
 .food-display{
 padding-left:8%;
 padding-top:2%;
