@@ -12,6 +12,3 @@ one of the already availbale credentials are
 username(Max 10 chars):sampleuser
 password(Max 8 chars):test
 Please update json file accordingly for additional credentials
-
-
-
